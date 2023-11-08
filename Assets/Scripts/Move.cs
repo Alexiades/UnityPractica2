@@ -4,35 +4,42 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-
-   // public float y = 0.50f;
-    public int x,y,z = 0;
-    public float speed = 2;
+  //Definicion de Variables
+   public float y = 2.50f;
+   public float z = 1;
+   public float x = 1;
+   public float speed = 2.5f;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0,1, 0);
-        //direction.normalized 
         
-    }
 
+    }
+              
     // Update is called once per frame
     void Update()
-    {
+    { 
 
-
-    foreach (Transform child in transform)
-        {
-            child.position += Vector3.up * 10.0f;
-        }
-
-
-      // Duplicar el movimineto. 
-      //transform.position = new Vector3(0,1,2) * 2; 
+      // Dirección del vector3 en el espacio
+      //Vector3 direction = new Vector3(0,y, 0);
 
       // Elevar el cubo
-      //transform.Translate(Vector3.up  * speed * Time.deltaTime); 
+      //this.transform.Translate(direction * speed); 
+
+      //Multiplico por 2 las variables de diereccion
+      //this.transform.Translate(2*x,2*y,2*z);     
   
+      //direction.normalized
+      //transform.Translate(direction.normalized);
+
+      // Aumentar velocidad 
+      //this.transform.Translate(direction.normalized*speed);
+
+      // Corregir inconsistencia de la velocidad
+      //this.transform.Translate(goal.normalized * speed*Time.deltaTime);
+
+
     }
 }
